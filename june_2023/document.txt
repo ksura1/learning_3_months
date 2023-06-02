@@ -1,0 +1,18 @@
+# 2nd june 2023
+
+> git (version)
+: git : init> git help track changes, review changes , comparing them based commit id
+#------------
+setup:
+1. how setup git
+2. email, username setup in git
+
+basic cmd:
+1. git init
+2. git status
+3. git add <filename>
+  3.1 git add .
+4. git commit -m "<message> 120 char"
+5. git reflog
+6. git checkout <commit id>
+
