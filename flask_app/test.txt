@@ -1,0 +1,5 @@
+line1
+story about robot figiting in programming World
+tag 1
+tag2
+tag 100
