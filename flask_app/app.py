@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request, render_template
 import datetime
 
 # flask run --reload
@@ -21,20 +21,29 @@ def todays_date():
 
 text will be on webpage
 """
-
+@app.route("/get_input")
+def input():
+    i = request.args.get('input')
+    return f"<p> input: {i}</p>"
 # api2: file_name in argument
 """
 ? file_name=requirment.txt
 
 read file , display content file on page
 """
+@app.route("/get_file")
+def file():
+    f = request.args.get('file_name')
+    log = open('/path/to/my/file.txt', 'r').read()
+    return log
 
 # api3 : use template in flask
 """
 display story or wikipedia page link
 """
-
-
+@app.route("/")
+def index():
+    return render_template('index.html')
 
 
 
