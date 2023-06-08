@@ -54,13 +54,14 @@ def form():
         # Print the form data to the console
         for key, value in request.form.items():
             print(f'{key}: {value}')
-        flash("you are successfuly logged in")
     return render_template('user_input.html')
 
 #api5
 @app.route('/')
 def home():
-	return render_template("home.html") 
+        flash('This is a flash message')
+        return render_template("home.html") 
 
 if __name__ == "__main__":
+    app.secret_key = "secret"
     app.run(debug=True)
