@@ -45,7 +45,16 @@ display story or wikipedia page link
 def index():
     return render_template('index.html')
 
+print('Test')
+
+#api4
+@app.route("/user", methods=['GET', 'POST'])
+def form():
+    if request.method == 'POST':
+        # Print the form data to the console
+        for key, value in request.form.items():
+            print(f'{key}: {value}')
+    return render_template('user_input.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
-
-print('Test')
