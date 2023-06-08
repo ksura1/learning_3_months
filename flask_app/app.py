@@ -34,7 +34,7 @@ read file , display content file on page
 @app.route("/get_file")
 def file():
     f = request.args.get('file_name')
-    log = open('/path/to/my/file.txt', 'r').read()
+    log = open(f, 'r').read()
     return log
 
 # api3 : use template in flask
@@ -45,6 +45,7 @@ display story or wikipedia page link
 def index():
     return render_template('index.html')
 
+if __name__ == "__main__":
+    app.run(debug=True)
 
-
-
+print('Test')
