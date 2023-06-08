@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <h1>User Info</h1>
+{% extends "base.html" %}
+
+{% block content %}
   <form method="post">
     <label for="fullName">Full Name:</label>
     <input type="text" id="fullName" name="full_name" required/>
     <br>
     <input type="submit">
   </form>
-<html>
+  {% endblock %}
